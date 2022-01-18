@@ -1,0 +1,112 @@
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  min-height: 100vh;
+  background-size: cover;
+  background-image: url(img/sunset.jpg);
+}
+
+a {
+  text-decoration: none;
+}
+
+#quote-box {
+  width: auto;
+  max-width: 300px;
+  min-width: 300px;
+  background-color: $white;
+  color: $black;
+  padding: 2rem 1rem;
+  border-radius: 5px;
+  margin: 2rem auto;
+  box-shadow: 2px 2px 2px 2px rgba($grey, 0.25);
+
+  @include breakpoint(small-max) {
+    max-width: 900px;
+    min-width: 600px;
+    padding: 3rem 2rem;
+  }
+}
+
+#text {
+  font-size: 2rem;
+  padding: 1rem;
+
+  @include breakpoint(small-max) {
+    font-size: 3rem;
+    padding: 1rem 2rem;
+  }
+}
+
+#author {
+  font-style: italic;
+
+  font-size: 1.5rem;
+  margin: 1rem 0;
+
+  @include breakpoint(small-max) {
+    font-size: 2.2rem;
+    margin: 3rem 0;
+  }
+}
+
+#tweet-quote {
+  background: $blue;
+  color: $white;
+  padding: 15px 40px;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background: $dark-blue;
+  }
+
+  @include breakpoint(small-max) {
+    margin-bottom: 0;
+  }
+}
+
+#new-quote {
+  background: $white;
+  color: $black;
+  padding: 15px 40px;
+  border-radius: 5px;
+  border: 1px solid $black;
+
+  &:hover {
+    background: $black;
+    color: $white;
+  }
+}
+.quote {
+  &-mark {
+    text-align: center;
+    color: $black;
+    margin: 1rem 0;
+    font-size: 2.5rem;
+  }
+
+  &-button {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    @include breakpoint(small-max) {
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+    }
+  }
+}
+
+#text.long-quote {
+  font-size: 1.75rem;
+  line-height: 2.2rem;
+}
